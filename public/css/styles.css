@@ -2,5 +2,215 @@
 *,
 *:before,
 *:after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-image: url('/images/site/checkerboard.jpg');
+  background-size: 250px 250px;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+#wrapper {
+  max-width: 90%;
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid rgb(76, 206, 238);
+  box-shadow: 0 0 10px rgb(76, 206, 238), 0 0 10px rgb(76, 206, 238), 0 0 10px rgb(76, 206, 238), 0 0 10px rgb(76, 206, 238);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+
+}
+
+.siteName{
+  font-size: 1.5em;
+  color: #2a2a2a;
+}
+
+.siteName a{
+  text-decoration: none;
+}
+
+header h1 {
+  color: #2a2a2a;
+  font-size: 1.8em;
+}
+
+.navbar {
+  width: 100%;
+  background-color: black;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-around; /* Evenly space the links */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  padding: 15px 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.account-link {
+  font-size: 0.9em;
+  color: #333;
+  text-decoration: none;
+}
+
+.intro {
+  text-align: center;
+  padding: 20px;
+}
+
+.intro h2 {
+  font-size: 1.8em;
+  color: #2a2a2a;
+}
+
+.car-info {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+}
+
+.text-container {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 30%; /* Adjust the width as needed */
+  max-width: 90%; /* Ensure it doesn't grow larger than the container */
+  background-color: rgba(255, 255, 255, 0.7); /* Low opacity background */
+  padding: 20px;
+  border-radius: 10px;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.text-container h3,
+.text-container p,
+.text-container button {
+  margin: 10px 0;
+}
+
+.car-info button {
+  background-color: #007acc;
+  color: white;
+  font-size: 1.1em;
+  padding: 12px 24px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.upgrades, .reviews {
+  width: 48%; 
+}
+
+.upgrades-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+}
+
+.upgrade-item {
+  background-color: #f0f0f0; 
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.upgrade-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.reviews ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.reviews li {
+  margin-bottom: 10px;
+}
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .reviews {
+    order: 1; /* Display reviews on top */
+    width: 100%;
+  }
+
+  .upgrades {
+    order: 2; /* Display upgrades at the bottom */
+    width: 100%;
+  }
+
+  .upgrades-list {
+    grid-template-columns: 1fr 1fr; /* Single column layout for upgrades */
+  }
+  .text-container {
+    width: 50%;
+    left: 0%; 
+    top: 0%; 
+    max-width: 90%;
+    margin: 0;
+    padding: 0;
+  }
+  .text-container h3{
+    margin: 0;
+  }
+
+  #wrapper{
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .intro h2{
+    font-size: 1.5em;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  font-size: 0.8em;
+  background-color: #f5f5f5;
+  margin-top: 20px;
 }
